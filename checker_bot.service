@@ -1,0 +1,13 @@
+[Unit]
+Description=Checker Bot
+After=network.target
+
+[Service]
+Type=simple
+User=user
+WorkingDirectory=/home/user/checker_bot
+Environment="TOKEN=your_token_here"
+ExecStart=/home/user/bot_checker_bot/venv/bin/python bot.py
+
+[Install]
+WantedBy = multi-user.target
